@@ -22,7 +22,7 @@
 
       initialize: function() {
 
-        // Bind this to all
+        // Bind this to these functions
         _.bindAll(this, "_drawAppointment", "_onYearsMenuClick");
 
         // Extend options with defaults
@@ -48,8 +48,9 @@
         this.$footer = this.$el.find("footer");
 
         // Copy the model
-        var history = this.model.get("rows")
-          , self = this;
+        var history = this.model.clone().get("rows")
+          , self = this
+          , model_size = _.size(this.model.get("rows"));
 
         // Set the options
         this.timeline = {
@@ -59,16 +60,17 @@
         };
 
         // Start drawing!
-        drawRow()
+        drawRow();
 
         function drawRow() {
-
           var day = history.shift();
 
           self._drawAppointment(day);
           
           if (history.length > 0) {
-            setTimeout(drawRow,2);
+            self._updateLoader(_.size(history),model_size);
+
+            setTimeout(drawRow,10);
           } else {
             self._stopLoader();
             self._bindSpecialEvents();
@@ -192,6 +194,10 @@
         // Start spinner
         var target = this.$loader.find("#spin")[0]
           , spinner = new Spinner(this.options.loaderOptions).spin(target);
+      },
+
+      _updateLoader: function(rest, total) {
+        this.$loader.find("p").html("has drawn the <strong>" + (((total - rest)/total) * 100).toFixed(0) + "%</strong>")
       },
 
       _stopLoader: function() {
