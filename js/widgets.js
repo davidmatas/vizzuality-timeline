@@ -55,7 +55,7 @@
 
     _startLoader: function($el) {
       var opts = {
-        lines: 14,length: 0,width: 4,radius: 10,rotate: 0,color: '#666',
+        lines: 14,length: 0,width: 4,radius: 10,rotate: 0,color: '#999',
         speed: 1,trail: 89,shadow: false,hwaccel: true,className: 'spinner',
         zIndex: 2e9,top: 'auto',left: 'auto'
       };
@@ -106,9 +106,10 @@
         , height = 0;
 
 
-      for (var i = 0, length = data.length; i < length; i++) {
+
+      function drawAppointment() {
         
-        var day = data[i]
+        var day = data[0]
           , timestamp = today - new Date(day.when)
           , top_pos = (timestamp / (1000*60*60*24*30)) * 100;
 
@@ -138,10 +139,33 @@
         var appointment = $("<div>").addClass("appointment");
         $el.find("div.month:last-child ." + side).append(appointment);
 
-        if (day.title) appointment.append("<h3><a target='_blank' href='" + day.link + "'>" + day.title + "</a></h3>")
-        if (day.description) appointment.append("<p class='description'>" + day.description + "</p>")
-        if (day.image) appointment.append("<img src='/img/layout/" + day.image + "' title='" + day.title + "' alt='" + day.title + "' />")
-        if (day.footer) appointment.append("<p class='footer'>" + day.footer + "</p>")
+        if (day.title)        appointment.append("<h3><a target='_blank' href='" + day.link + "'>" + day.title + "</a></h3>")
+        if (day.description)  appointment.append("<p class='description'>" + day.description + "</p>")
+        if (day.image)        appointment.append("<img src='/img/layout/" + day.image + "' title='" + day.title + "' alt='" + day.title + "' />")
+        if (day.position)     appointment.append("<div class='map' id='map" + day.cartodb_id + "'></div>")
+        if (day.footer)       appointment.append("<p class='footer'>" + day.footer + "</p>")
+
+        // Map if exists
+        if (day.position) {
+
+          var map = new L.Map('map' + day.cartodb_id)
+            , position = day.position.split(',')
+            , center = new L.LatLng(position[0],position[1]);
+
+          // create a CloudMade tile layer with style #997 (or use other provider of your choice)
+          var cloudmade = new L.TileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+              attribution: '',
+              maxZoom: 20
+          });
+
+          // add the layer to the map, set the view to a given place and zoom
+          map.addLayer(cloudmade).setView(center, 16);
+
+          // create a marker in the given location and add it to the map
+          var marker = new L.Marker(center);
+          map.addLayer(marker);
+        }
+
 
         // Point
         var date_no_proccessed = new Date(day.when).toLocaleDateString()
@@ -162,7 +186,16 @@
           side = "left"
         }
 
+        // Remove last
+        data.shift();
+
+        // More?
+        if (data.length > 0)
+          setTimeout(drawAppointment,1);
       }
+
+
+      drawAppointment();
 
 
       // Show timeline and footer

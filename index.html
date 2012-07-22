@@ -10,6 +10,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <link href="img/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.css" />
+  <!--[if IE]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.ie.css" /><![endif]-->
   <link rel="stylesheet" href="css/main.css">
   <script src="js/vendor/modernizr-2.5.3.min.js"></script>
 </head>
@@ -20,8 +22,10 @@
     <p>is serving the data</p>
   </div>
   <header>
-    <h1><a href="http://vizzuality.com">Vizzuality</a></h1>
-    <p class="subtitle">After some years running and some projects done, it's time to recap...</p>
+    <div class="wrapper">
+      <h1><a href="http://vizzuality.com">Vizzuality</a></h1>
+      <p class="subtitle">After some years running and some projects done, it's time to recap...</p>
+    </div>
   </header>
   <div class="layout">
     <div class="timeline"></div>
@@ -35,6 +39,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
   <script src="js/vendor/tipsy.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.js"></script>
   <script src="js/vendor/spin.min.js"></script>
   <script src="js/vendor/waypoint.min.js"></script>
   <script src="js/widgets.js"></script>
