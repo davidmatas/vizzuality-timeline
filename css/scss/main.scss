@@ -120,6 +120,7 @@
 
     div.layout {
       position:relative;
+      opacity:0;
       width: 610px;
       margin:70px auto 0;
       padding:0 0 100px;
@@ -162,6 +163,7 @@
       div.month {
         position:relative;
         width:600px;
+        margin:120px 0 0 0;
         z-index:0;
 
         div {
@@ -229,7 +231,7 @@
             &:hover {
               height:4px;
               width:4px;
-              margin: 13px 0 0 -7px;
+              margin: 12px 0 0 -7px;
               cursor:pointer;
               z-index:20;
             }
@@ -321,7 +323,6 @@
 
       // Middle timeline
       div.timeline {
-        display:none;
         position:absolute;
         left:272px;
         top:0;
@@ -339,27 +340,26 @@
       display:none;
       bottom:0;
       left:0;
-      height:120px;
+      height:80px;
       width:100%;
       margin:0;
-      @include background(linear-gradient(rgba(#E3E3E3,0), rgba(#E3E3E3,1) 90%));
+      @include background(linear-gradient(rgba(#E3E3E3,0), rgba(#E3E3E3,1) 70%));
       z-index:5;
 
       div.years {
         width:600px;
-        margin:100px auto 0;
+        margin:55px auto 0;
         text-align:center;
         a {
           height:10px;
-          padding:2px 15px 1px;
+          padding:3px 20px 2px;
           margin:0 3px 0 0;
           background:#999999;
-          font:bold 10px "Arial";
+          font:bold 11px "Arial";
           text-align:center;
           color:white;
           text-decoration:none;
-          letter-spacing:-1px;
-          @include border-radius(2px);
+          letter-spacing:0;
           &:last-child {margin:0}
           &:hover {background:#666666; cursor:pointer;}
           &.selected {background:#666666; &:hover {cursor:default}}

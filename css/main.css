@@ -200,31 +200,31 @@ table { border-collapse: collapse; border-spacing: 0; }
 .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
 
 /* icons */
-.icons-sprite, .icons-Vizzuality, .icons-cartodb, .icons-cartodb_logo, .icons-cartodb_text, .icons-gentoos, .icons-office, .icons-project, .icons-recruitment, .icons-star, body div.loader a.cartodb, body div.loader a.cartodb:before, body header div.wrapper h1 a, body footer a.xavijam { background: url('../img/icons-sa20d3ab8a1.png') no-repeat; }
+.icons-sprite, .icons-Vizzuality, .icons-cartodb, .icons-cartodb_logo, .icons-cartodb_text, .icons-gentoos, .icons-office, .icons-project, .icons-recruitment, .icons-star, body div.loader a.cartodb, body div.loader a.cartodb:before, body header div.wrapper h1 a, body footer a.xavijam { background: url('../img/icons-sdecdd95219.png') no-repeat; }
 
 .icons-Vizzuality { background-position: 0 0; }
 
-.icons-cartodb { background-position: 0 -127px; }
+.icons-cartodb { background-position: 0 -64px; }
 
-.icons-cartodb_logo { background-position: 0 -64px; }
+.icons-cartodb_logo { background-position: 0 -106px; }
 
-.icons-cartodb_text { background-position: 0 -242px; }
+.icons-cartodb_text { background-position: 0 -169px; }
 
-.icons-gentoos { background-position: 0 -189px; }
+.icons-gentoos { background-position: 0 -207px; }
 
-.icons-office { background-position: 0 -300px; }
+.icons-office { background-position: 0 -260px; }
 
-.icons-project { background-position: 0 -324px; }
+.icons-project { background-position: 0 -284px; }
 
-.icons-recruitment { background-position: 0 -346px; }
+.icons-recruitment { background-position: 0 -306px; }
 
-.icons-star { background-position: 0 -270px; }
+.icons-star { background-position: 0 -327px; }
 
 body { width: 100%; min-width: 600px; height: 100%; margin: 0; padding: 0; overflow-y: scroll; background: url("../img/layout/body_bkg.jpg") #cccccc; }
 body div.loader { position: relative; width: 121px; height: auto; margin: 150px auto; }
-body div.loader a.cartodb { position: relative; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; width: 84px; height: 18px; margin: 0 0 0 19px; background-position: 0 -242px; text-indent: -9999px; text-transform: uppercase; font-size: 0; line-height: 0; }
+body div.loader a.cartodb { position: relative; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; width: 84px; height: 18px; margin: 0 0 0 19px; background-position: 0 -169px; text-indent: -9999px; text-transform: uppercase; font-size: 0; line-height: 0; }
 body div.loader a.cartodb { *display: inline; }
-body div.loader a.cartodb:before { content: ' '; position: absolute; left: 21px; bottom: 24px; width: 50px; height: 63px; background-position: 0 -64px; }
+body div.loader a.cartodb:before { content: ' '; position: absolute; left: 21px; bottom: 24px; width: 50px; height: 63px; background-position: 0 -106px; }
 body div.loader a.cartodb:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 body div.loader div#spin { position: absolute; margin: 0; padding: 0; top: 62px; left: 62px; }
 body div.loader p { display: block; width: 100%; margin: 5px 0 0; padding: 0; font: normal 13px Arial; color: #999999; text-align: center; }
@@ -234,17 +234,17 @@ body header div.wrapper h1 { display: -moz-inline-box; -moz-box-orient: vertical
 body header div.wrapper h1 { *display: inline; }
 body header div.wrapper h1 a { display: block; width: 120px; height: 64px; text-indent: -9999px; text-transform: uppercase; font-size: 0; line-height: 0; background-position: 0 0; }
 body header div.wrapper p { margin: 10px 0 0 0; font: normal 16px "Arial"; color: #999999; text-shadow: white 0 1px; letter-spacing: 0px; text-align: center; }
-body div.layout { position: relative; width: 610px; margin: 70px auto 0; padding: 0 0 100px; letter-spacing: -4px; }
-body div.layout span.year { position: absolute; top: -60px; left: 50%; width: 30px; height: 13px; padding: 5px; margin: -11px 0 0 -20px; background: #797979; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; font: bold 12px "Arial"; color: white; letter-spacing: -1px; text-align: center; z-index: 1; }
-body div.layout span.month { position: absolute; left: 50%; top: -30px; width: auto; height: 13px; padding: 5px; margin: -11px 0 0 -20px; background: #AAAAAA; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; font: bold 12px "Arial"; color: white; letter-spacing: -1px; text-align: center; z-index: 1; }
-body div.layout div.month { position: relative; width: 600px; z-index: 0; }
+body div.layout { position: relative; opacity: 0; width: 610px; margin: 70px auto 0; padding: 0 0 100px; letter-spacing: -4px; }
+body div.layout span.year { position: absolute; top: -60px; left: 50%; width: 30px; height: 13px; padding: 5px; margin: -11px 0 0 -20px; background: #797979; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; font: bold 12px "Arial"; color: white; letter-spacing: -1px; text-align: center; z-index: 1; }
+body div.layout span.month { position: absolute; left: 50%; top: -30px; width: auto; height: 13px; padding: 5px; margin: -11px 0 0 -20px; background: #AAAAAA; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; font: bold 12px "Arial"; color: white; letter-spacing: -1px; text-align: center; z-index: 1; }
+body div.layout div.month { position: relative; width: 600px; margin: 120px 0 0 0; z-index: 0; }
 body div.layout div.month div { display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; letter-spacing: 0; }
 body div.layout div.month div { *display: inline; }
 body div.layout div.month div.left, body div.layout div.month div.right { position: relative; width: 275px; vertical-align: top; }
 body div.layout div.month div.right { margin: 0 0 0 50px; }
 body div.layout div.month div.left div.appointment:first-child { margin: 0; }
 body div.layout div.month div.right div.appointment:first-child { margin: 20px 0 0 0; }
-body div.layout div.month div.appointment { position: relative; display: block; width: 255px; height: auto; padding: 10px; margin: 20px 0 0 0; background: white; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; border: 1px solid #BCBCBC; }
+body div.layout div.month div.appointment { position: relative; display: block; width: 255px; height: auto; padding: 10px; margin: 20px 0 0 0; background: white; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px; -khtml-border-radius: 3px; border-radius: 3px; border: 1px solid #BCBCBC; }
 body div.layout div.month div.appointment h3 { margin: 0; font: bold 15px "PT Sans"; color: #666666; }
 body div.layout div.month div.appointment h3 + img { padding: 10px 0 0 0; border-top: 1px solid #DDD; }
 body div.layout div.month div.appointment h3 + p.description { padding: 10px 0 0 0; border-top: 1px solid #DDD; }
@@ -256,29 +256,29 @@ body div.layout div.month div.appointment p { margin: 10px 0 0; font: normal 13p
 body div.layout div.month div.appointment a { text-decoration: none; color: #96CA51; }
 body div.layout div.month div.appointment a:hover { color: #96CA51; text-decoration: underline; }
 body div.layout div.month div.appointment div.map { margin: 10px 0 0 0; display: block; width: 100%; height: 200px; }
-body div.layout div.month div.appointment span.day { position: absolute; top: 0; left: 300px; width: 2px; height: 2px; padding: 3px; margin: 13px 0 0 -6px; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; -o-border-radius: 25px; border-radius: 25px; background: white; border: 2px solid #787878; z-index: 10; }
-body div.layout div.month div.appointment span.day:hover { height: 4px; width: 4px; margin: 13px 0 0 -7px; cursor: pointer; z-index: 20; }
-body div.layout div.month div.appointment span.type { position: absolute; top: -11px; left: -10px; width: 20px; height: 20px; border: 2px solid rgba(102, 102, 102, 0.3); background: white; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; -o-border-radius: 25px; border-radius: 25px; }
-body div.layout div.month div.appointment span.type.true { background: url('../img/icons-sa20d3ab8a1.png') 4px -342px no-repeat #afd9b3; border-color: rgba(0, 128, 0, 0.3); }
-body div.layout div.month div.appointment span.type.false { background: url('../img/icons-sa20d3ab8a1.png') 4px -342px no-repeat #ffb4b2; border-color: rgba(255, 0, 0, 0.3); }
-body div.layout div.month div.appointment span.type.office { border: 2px solid rgba(102, 102, 102, 0.5); background: url('../img/icons-sa20d3ab8a1.png') 3px -297px no-repeat white; }
-body div.layout div.month div.appointment span.type.project { border: 2px solid rgba(102, 102, 102, 0.5); background: url('../img/icons-sa20d3ab8a1.png') 3px -320px no-repeat white; }
-body div.layout div.month div.appointment span.type.star { border: 2px solid rgba(255, 255, 0, 0); background: url('../img/icons-sa20d3ab8a1.png') 0 -270px no-repeat #f4e335; }
+body div.layout div.month div.appointment span.day { position: absolute; top: 0; left: 300px; width: 2px; height: 2px; padding: 3px; margin: 13px 0 0 -6px; -moz-border-radius: 25px; -webkit-border-radius: 25px; -o-border-radius: 25px; -ms-border-radius: 25px; -khtml-border-radius: 25px; border-radius: 25px; background: white; border: 2px solid #787878; z-index: 10; }
+body div.layout div.month div.appointment span.day:hover { height: 4px; width: 4px; margin: 12px 0 0 -7px; cursor: pointer; z-index: 20; }
+body div.layout div.month div.appointment span.type { position: absolute; top: -11px; left: -10px; width: 20px; height: 20px; border: 2px solid rgba(102, 102, 102, 0.3); background: white; -moz-border-radius: 25px; -webkit-border-radius: 25px; -o-border-radius: 25px; -ms-border-radius: 25px; -khtml-border-radius: 25px; border-radius: 25px; }
+body div.layout div.month div.appointment span.type.true { background: url('../img/icons-sdecdd95219.png') 4px -302px no-repeat #afd9b3; border-color: rgba(0, 128, 0, 0.3); }
+body div.layout div.month div.appointment span.type.false { background: url('../img/icons-sdecdd95219.png') 4px -302px no-repeat #ffb4b2; border-color: rgba(255, 0, 0, 0.3); }
+body div.layout div.month div.appointment span.type.office { border: 2px solid rgba(102, 102, 102, 0.5); background: url('../img/icons-sdecdd95219.png') 3px -257px no-repeat white; }
+body div.layout div.month div.appointment span.type.project { border: 2px solid rgba(102, 102, 102, 0.5); background: url('../img/icons-sdecdd95219.png') 3px -280px no-repeat white; }
+body div.layout div.month div.appointment span.type.star { border: 2px solid rgba(255, 255, 0, 0); background: url('../img/icons-sdecdd95219.png') 0 -327px no-repeat #f4e335; }
 body div.layout div.month div.appointment:before { position: absolute; content: ' '; top: 13px; left: 100%; width: 0; height: 0; margin: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 6px solid white; z-index: 3; }
 body div.layout div.month div.appointment:after { position: absolute; content: ' '; top: 13px; right: -7px; width: 0; height: 0; margin: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 6px solid #BCBCBC; z-index: 0; }
 body div.layout div.month div.right div.appointment span.type { left: 264px; }
 body div.layout div.month div.right div.appointment span.day { left: -25px; }
 body div.layout div.month div.right div.appointment:before { left: -6px; border-left: none; border-right: 6px solid white; }
 body div.layout div.month div.right div.appointment:after { left: -7px; border-left: none; border-right: 6px solid #BCBCBC; }
-body div.layout div.timeline { display: none; position: absolute; left: 272px; top: 0; bottom: 0; width: 2px; height: 100%; margin: 0 28px; background: #BDBDBD; z-index: 0; }
-body footer { position: fixed; display: none; bottom: 0; left: 0; height: 120px; width: 100%; margin: 0; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(227, 227, 227, 0)), color-stop(90%, #e3e3e3)); background: -webkit-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 90%); background: -moz-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 90%); background: -o-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 90%); background: -ms-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 90%); background: linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 90%); z-index: 5; }
-body footer div.years { width: 600px; margin: 100px auto 0; text-align: center; }
-body footer div.years a { height: 10px; padding: 2px 15px 1px; margin: 0 3px 0 0; background: #999999; font: bold 10px "Arial"; text-align: center; color: white; text-decoration: none; letter-spacing: -1px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
+body div.layout div.timeline { position: absolute; left: 272px; top: 0; bottom: 0; width: 2px; height: 100%; margin: 0 28px; background: #BDBDBD; z-index: 0; }
+body footer { position: fixed; display: none; bottom: 0; left: 0; height: 80px; width: 100%; margin: 0; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(227, 227, 227, 0)), color-stop(70%, #e3e3e3)); background: -webkit-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 70%); background: -moz-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 70%); background: -o-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 70%); background: -ms-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 70%); background: linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 70%); z-index: 5; }
+body footer div.years { width: 600px; margin: 55px auto 0; text-align: center; }
+body footer div.years a { height: 10px; padding: 3px 20px 2px; margin: 0 3px 0 0; background: #999999; font: bold 11px "Arial"; text-align: center; color: white; text-decoration: none; letter-spacing: 0; }
 body footer div.years a:last-child { margin: 0; }
 body footer div.years a:hover { background: #666666; cursor: pointer; }
 body footer div.years a.selected { background: #666666; }
 body footer div.years a.selected:hover { cursor: default; }
 body footer a.cartodb { position: absolute; bottom: 0; left: 5px; }
-body footer a.xavijam { position: absolute; right: 5px; bottom: 0; padding: 0 0 23px 0; background-position: 0 -177px; font: normal 9px "PT Sans"; color: #777777; text-decoration: none; }
+body footer a.xavijam { position: absolute; right: 5px; bottom: 0; padding: 0 0 23px 0; background-position: 0 -195px; font: normal 9px "PT Sans"; color: #777777; text-decoration: none; }
 body footer a.xavijam em { display: block; padding: 0 6px 0 0; text-align: right; }
 body footer a.xavijam:hover { color: #333333; }
