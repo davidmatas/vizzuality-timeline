@@ -6,7 +6,7 @@ Showing the things have happened in Vizzuality, using <a href="http://cartodb.co
 
 ###COMPASS CONFIGURATION
  
-If you want to run 'compass' gem, you need to installed:
+If you want to run 'compass' gem, you need to install:
 
 ```bash
 gem install bundler
