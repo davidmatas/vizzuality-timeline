@@ -1,7 +1,7 @@
 Vizzuality Timeline
 -------------------
 
-Showing the things have happen in Vizzuality, using <a href="http://cartodb.com" target="_blank">CartoDB</a> as database.
+Showing the things have happened in Vizzuality, using <a href="http://cartodb.com" target="_blank">CartoDB</a> as database.
 
 
 ###COMPASS CONFIGURATION
