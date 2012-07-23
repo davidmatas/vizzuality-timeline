@@ -153,9 +153,9 @@
         margin: -11px 0 0 -20px;
         background:#AAAAAA;
         @include border-radius(2px);
-        font:bold 12px "Arial";
+        font:normal 11px "Arial";
         color:white;
-        letter-spacing:-1px;
+        letter-spacing:0;
         text-align:center;
         z-index:1;
       }
