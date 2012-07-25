@@ -3,7 +3,7 @@
   @import "normalize";
   @import "ie";
   @import "tipsy";
-
+  //@import "example";
 
   /* icons */
   $icons-recruitment-spacing: 10px;
@@ -121,7 +121,7 @@
     div.layout {
       position:relative;
       opacity:0;
-      width: 610px;
+      width: 600px;
       margin:70px auto 0;
       padding:0 0 100px;
       letter-spacing: -4px;
@@ -177,32 +177,28 @@
           vertical-align:top;
         }
 
-        div.right {
-          margin:0 0 0 50px;
-        }
-
-        div.left div.appointment:first-child {
-          margin:0;
-        }
-
-        div.right div.appointment:first-child {
-          margin:20px 0 0 0;
-        }
+        div.right {margin:0 0 0 36px; div.appointment:first-child {margin:20px 0 0 0;}}
+        div.left {margin:0 0 0 14px; div.appointment:first-child {margin:0;}}
 
         div.appointment {
           position:relative;
-          display:block;
-          width:255px;
+          @include inline-block();
+          float:left;
+          width:254px;
           height:auto;
-          padding:10px;
+          padding:3px;
           margin:20px 0 0 0;
           background:white;
+          @include box-shadow(rgba(0,0,0,0.10) -1px 0 2px 1px);
           @include border-radius(3px);
           border:1px solid #BCBCBC;
 
           h3 {
-            margin:0; font:bold 15px "PT Sans"; color:#666666;
-            & + img {padding:10px 0 0 0; border-top:1px solid #DDD;}
+            margin:7px;
+            font:bold 15px "PT Sans";
+            color:#666666;
+
+            & + img {position:relative; padding:0; margin:4px 0 0!important;}
             & + p.description {padding:10px 0 0 0; border-top:1px solid #DDD;}
             & + p.footer {padding:10px 0 0 0; border-top:1px solid #DDD;}
             a {
@@ -210,15 +206,15 @@
               &:hover {color:#333333;}
             }
           }
-          img {margin:10px 0 0;}
-          p {margin:10px 0 0; font:normal 13px "Arial"; color:#999999;}
+          img {width:254px; @include inline-block(); margin:10px 0 0; padding:0;}
+          p {margin:10px 7px 7px; font:normal 13px "Arial"; color:#999999; line-height:17px;}
           a {text-decoration:none; color:#96CA51; &:hover {color:#96CA51; text-decoration:underline;}}
-          div.map {margin:10px 0 0 0; display:block; width:100%; height:200px;}
+          div.map {position:relative; margin:3px 0 0 0; @include inline-block(); width:100%; height:200px;}
 
           span.day {
             position:absolute;
             top:0;
-            left:300px;
+            left:286px;
             width:2px;
             height:2px;
             padding:3px;
@@ -239,13 +235,14 @@
 
           span.type {
             position:absolute;
-            top:-11px;
-            left: -10px;
-            width:20px;
-            height:20px;
+            display:none;
+            top:-14px;
+            left: -13px;
+            width:24px;
+            height:24px;
             border:2px solid rgba(#666,0.3);
             background:white;
-            @include border-radius(25px);
+            @include border-radius(50px);
 
             &.true {
               @include background(sprite($icons-sprites, recruitment, $offset-x:4px, $offset-y:4px) no-repeat #AFD9B3);
@@ -304,6 +301,7 @@
 
         div.right {
           div.appointment {
+            @include box-shadow(rgba(0,0,0,0.10) 1px 0 2px 1px);
             span.type {left:264px}
             span.day {left:-25px}
             &:before {
@@ -354,15 +352,16 @@
           height:10px;
           padding:3px 20px 2px;
           margin:0 3px 0 0;
-          background:#999999;
+          //background:#999999;
+          border-bottom:4px solid #999999;
           font:bold 11px "Arial";
           text-align:center;
-          color:white;
+          color:#999999;
           text-decoration:none;
           letter-spacing:0;
           &:last-child {margin:0}
-          &:hover {background:#666666; cursor:pointer;}
-          &.selected {background:#666666; &:hover {cursor:default}}
+          &:hover {border-color:#666666; color:#666666; cursor:pointer;}
+          &.selected {border-color:#333333; color:#333333; &:hover {cursor:default; color:#333333; border-color:#333333;}}
         }
       }
 
