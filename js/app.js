@@ -59,6 +59,15 @@
           last_year: ""
         };
 
+        // Initialize the stats 
+        this.stats = {
+          projects: 0,
+          employees: 0,
+          offices: 0,
+          years: 0
+
+        }
+
         // Start drawing!
         drawRow();
 
@@ -72,8 +81,10 @@
 
             setTimeout(drawRow,10);
           } else {
+            self._printStats();
+            self._showBorn();
+            self._bindSpecialEvents();            
             self._stopLoader();
-            self._bindSpecialEvents();
             return self;
           }
         }
@@ -126,7 +137,19 @@
           // New year for the footer years menu
           var year = this.make("a", {"id":timeline.last_year, "href": "#go" + timeline.last_year}, timeline.last_year);
           this.$footer.find("div.years").append(year);
+
+          // New year, add it
+          this.stats.years++;
         }
+
+
+        /* Taking stats */
+        // Project? Add it
+        if (day.type == "project") this.stats.projects++;
+        // Active employee? Add it
+        if (day.type == "recruitment" && day.status) this.stats.employees++;
+        // Active office? Add it
+        if (day.type == "office" && day.status) this.stats.offices++;
 
 
         // Block
@@ -145,7 +168,7 @@
         // Map if exists
         if (day.position) {
 
-          var map = new L.Map('map' + day.cartodb_id)
+          var map = new L.Map('map' + day.cartodb_id, {scrollWheelZoom: false})
             , position = day.position.split(',')
             , center = new L.LatLng(position[0],position[1]);
 
@@ -182,6 +205,30 @@
           this.timeline.side = "left";
         }
 
+      },
+
+      _printStats: function() {
+        var $stats = $("<div>").addClass("long")
+          , $list = $("<ul>");
+
+        _.each(this.stats,function(i,stat){
+          $list.append("<li class='" + stat  + "'><h2>" + (stat == "projects" ? "+" + i : i) + "</h2><label>" + stat + "</label></li>")
+        })
+
+        $stats.append($list);
+
+        this.$timeline.prepend($stats);
+      },
+
+      _showBorn: function() {
+        var $born = $("<div>").addClass("long bottom");
+
+        $born
+          .append('<h1><a href="http://vizzuality.com" target="_blank">Vizzuality</a></h1>')
+          .append('<p>Born on 18 November 2008</p>')
+
+
+        this.$timeline.append($born);
       },
 
       _initLoader: function() {
