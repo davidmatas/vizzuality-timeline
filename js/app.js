@@ -1,6 +1,5 @@
 
-  (function() {
-
+  $(document).ready(function() {
 
     /*
      * Vizzuality Timeline View
@@ -35,7 +34,8 @@
         this.model
           .bind("change", this.render, this)
           .fetch({
-            data: { q: "SELECT * FROM " + this.options.table + " ORDER BY date_trunc('day',\"when\") DESC" }
+            data: { q: "SELECT * FROM " + this.options.table + " ORDER BY date_trunc('day',\"when\") DESC" },
+            dataType: "jsonp"
           });
       },
 
@@ -160,7 +160,8 @@
         if (day.link)         var a_link = "<a href='" + day.link + "' target='_blank'>" + day.title + "</a>";
         if (day.title)        $appointment.append("<h3>" +  ((a_link) ? a_link : day.title) + "</h3>");
         if (day.description)  $appointment.append("<p class='description'>" + day.description + "</p>");
-        if (day.image)        $appointment.append("<img height='" + day.asset_height + "' src='/img/layout/" + day.image + "' title='" + day.title + "' alt='" + day.title + "' />");
+        if (day.video)        $appointment.append(day.video);
+        if (day.image)        $appointment.append("<img height='" + (day.asset_height || 165) + "' src='/img/layout/" + day.image + "' title='" + day.title + "' alt='" + day.title + "' />");
         if (day.position)     $appointment.append("<div class='map' id='map" + day.cartodb_id + "'></div>");
         if (day.footer)       $appointment.append("<p class='footer'>" + day.footer + "</p>");
 
@@ -188,10 +189,10 @@
 
 
         // Point of the day
-        var date_no_proccessed = new Date(day.when).toLocaleDateString()
-          , parts = date_no_proccessed.split(",");
-        parts.shift();
-        $appointment.append("<span class='day' title='" + parts + "'></span>")
+        var date_no_proccessed = new Date(day.when)
+          , date_proccessed = date_no_proccessed.getMonthName() + " " + date_no_proccessed.getDate() + ", " + date_no_proccessed.getFullYear();
+
+        $appointment.append("<span class='day' title='" + date_proccessed + "'></span>")
 
 
         // Type of the appointment
@@ -238,21 +239,28 @@
         // Header symlink
         this.$header = this.$el.find("header");
 
-        // Start spinner
-        var target = this.$loader.find("#spin")[0]
-          , spinner = new Spinner(this.options.loaderOptions).spin(target);
+        //Start knob
+        this.$loader.find('.dial').knob({
+          width:100,
+          fgColor: "#4C98D3"
+        })
       },
 
       _updateLoader: function(rest, total) {
-        this.$loader.find("p").html("has drawn the <strong>" + (((total - rest)/total) * 100).toFixed(0) + "%</strong>")
+        var $dial = this.$loader.find(".dial");
+
+        $dial
+          .val((((total - rest + 1)/total) * 100).toFixed(0))
+          .trigger('change')
+          .show();
       },
 
       _stopLoader: function() {
         var self = this;
         this.$loader.animate({
-          marginTop:"30px",
+          marginTop:"-50px",
           opacity:0
-        }, 500, function(){
+        }, 300, function(){
           self.$header.show();
           self.$footer.show();
           self.$timeline.css({ opacity:1 });
@@ -293,7 +301,7 @@
      * Vizzuality Timeline Model
      */
     var VizzualityModel = Backbone.Model.extend({
-      urlRoot: "http://xavijam.cartodb.com/api/v2/sql"
+      urlRoot: "http://xavijam.cartodb.com/api/v2/sql/"
     });
 
 
@@ -303,4 +311,4 @@
       el: $("body"),
       model: new VizzualityModel()
     });
-  })()
+  })
