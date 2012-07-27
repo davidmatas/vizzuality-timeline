@@ -9,10 +9,23 @@
   $icons-star-spacing: 10px;
   $icons-project-spacing: 10px;
   $icons-office-spacing: 10px;
+  $icons-meetup-spacing: 10px;
+  $icons-sprintcode-spacing: 10px;
+  $icons-blog-spacing: 10px;
+  $icons-website-spacing: 10px;
   $icons-gentoos-spacing: 20px;
 
   @import "icons/*.png";
   @include all-icons-sprites;
+
+  /* mixins */
+  @mixin translateZ($value) {
+    -webkit-transform: translateZ($value);
+    -moz-transform: translateZ($value);
+    -ms-transform: translateZ($value);
+    -o-transform: translateZ($value);
+    transform: translateZ($value);
+  }
 
 
   body {
@@ -229,6 +242,7 @@
 
         &.bottom {
           margin:50px 14px 0 14px;
+          z-index:1;
 
           h1 {margin:15px 0 0 230px;}
           p {display:block; margin:10px 0 20px; font:normal 16px Arial; text-align:center; color:#BDBDBD; letter-spacing:0;}
@@ -286,6 +300,7 @@
         width:600px;
         margin:120px 0 0 0;
         z-index:0;
+        -webkit-perspective:3000;
 
         div {
           @include inline-block();
@@ -357,39 +372,25 @@
 
           span.type {
             position:absolute;
-            display:none;
-            top:-14px;
-            left: -13px;
-            width:24px;
-            height:24px;
-            border:2px solid rgba(#666,0.3);
+            display:block;
+            top:-16px;
+            left: -18px;
+            width:28px;
+            height:28px;
+            border:2px solid #ADADAD; 
             background:white;
             @include border-radius(50px);
 
-            &.true {
-              @include background(sprite($icons-sprites, recruitment, $offset-x:4px, $offset-y:4px) no-repeat #AFD9B3);
-              border-color:rgba(green,0.3);
-            }
-
-            &.false {
-              @include background(sprite($icons-sprites, recruitment, $offset-x:4px, $offset-y:4px) no-repeat #FFB4B2);
-              border-color:rgba(red,0.3);
-            }
-
-            &.office {
-              border:2px solid rgba(#666,0.5);
-              @include background(sprite($icons-sprites, office, $offset-x:3px, $offset-y:3px) no-repeat white);
-            }
-
-            &.project {
-              border:2px solid rgba(#666,0.5);
-              @include background(sprite($icons-sprites, project, $offset-x:3px, $offset-y:4px) no-repeat white);
-            }
-
-            &.star {
-              border:2px solid rgba(yellow,0);
-              @include background(sprite($icons-sprites, star, $offset-x:0px, $offset-y:0px) no-repeat #F4E335);
-            }
+            &.recruitment {@include background(sprite($icons-sprites, recruitment, $offset-x:6px, $offset-y:5px) no-repeat white);}
+            &.office {@include background(sprite($icons-sprites, office, $offset-x:6px, $offset-y:5px) no-repeat white);}
+            &.twitter {@include background(sprite($icons-sprites, twitter, $offset-x:4px, $offset-y:4px) no-repeat white);}
+            &.project {@include background(sprite($icons-sprites, project, $offset-x:6px, $offset-y:6px) no-repeat white);}
+            &.star {@include background(sprite($icons-sprites, star, $offset-x:6px, $offset-y:6px) no-repeat white);}
+            &.award {@include background(sprite($icons-sprites, award, $offset-x:5px, $offset-y:5px) no-repeat white);}
+            &.blog {@include background(sprite($icons-sprites, blog, $offset-x:6px, $offset-y:7px) no-repeat white);}
+            &.meetup,&.conference {@include background(sprite($icons-sprites, meetup, $offset-x:6px, $offset-y:5px) no-repeat white);}
+            &.sprintcode {@include background(sprite($icons-sprites, sprintcode, $offset-x:6px, $offset-y:6px) no-repeat white);}
+            &.website {@include background(sprite($icons-sprites, website, $offset-x:3px, $offset-y:5px) no-repeat white);}
           }
 
           &:before {
@@ -419,12 +420,32 @@
             border-left:6px solid #BCBCBC;
             z-index:0;
           }
+
+          // &.false {
+          //   background:#F1F1F1;
+
+          //   h3,a {color: #898989;}
+          //   a {
+          //     text-decoration:underline;
+          //     &:hover {color:#787878;}
+          //   }
+          //   @include box-shadow(rgba(black,0) 0 0 0 0);
+          //   img,div.map {
+          //     @include opacity(0.55);
+          //   }
+          //   span.type {
+          //     background-color:#F1F1F1;
+          //   }
+          //   &:before {
+          //     border-left-color:#F1F1F1;
+          //   }
+          // }
         }
 
         div.right {
           div.appointment {
             @include box-shadow(rgba(0,0,0,0.10) 1px 0 2px 1px);
-            span.type {left:264px}
+            span.type {left:244px}
             span.day {left:-25px}
             &:before {
               left:-6px;
@@ -436,6 +457,11 @@
               border-left: none;
               border-right:6px solid #BCBCBC;
             }
+            // &.false {
+            //   &:before {
+            //     border-right-color:#F1F1F1;
+            //   }
+            // }
           }
         }
       }

@@ -153,7 +153,7 @@
 
 
         // Block
-        var $appointment = $(this.make("div", {"class": "appointment"}, ""));
+        var $appointment = $(this.make("div", {"class": "appointment " + day.status}, ""));
 
         $month_block.find("." + timeline.side).append($appointment);
 
@@ -196,7 +196,7 @@
 
 
         // Type of the appointment
-        var type = $("<span>").addClass("type " + day.status + " " + day.type);
+        var type = $("<span>").addClass("type " + day.type);
         $appointment.append(type);
 
         // Change side for the next

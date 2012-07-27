@@ -199,32 +199,47 @@ table { border-collapse: collapse; border-spacing: 0; }
 .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
 
 /* icons */
-.icons-sprite, .icons-Vizzuality, .icons-cartodb, .icons-cartodb_logo, .icons-cartodb_text, .icons-gentoos, .icons-office, .icons-project, .icons-recruitment, .icons-star, body h1 a, body div.loader a.cartodb, body footer a.xavijam { background: url('../img/icons-s9c52d76a68.png') no-repeat; }
+.icons-sprite, .icons-Vizzuality, .icons-award, .icons-blog, .icons-cartodb, .icons-cartodb_logo, .icons-cartodb_text, .icons-gentoos, .icons-meetup, .icons-office, .icons-project, .icons-recruitment, .icons-sponsor, .icons-sprintcode, .icons-star, .icons-twitter, .icons-website, body h1 a, body div.loader a.cartodb, body footer a.xavijam { background: url('../img/icons-seb4d32f9b6.png') no-repeat; }
 
 .icons-Vizzuality { background-position: 0 0; }
 
-.icons-cartodb { background-position: 0 -64px; }
+.icons-award { background-position: 0 -64px; }
 
-.icons-cartodb_logo { background-position: 0 -106px; }
+.icons-blog { background-position: 0 -90px; }
 
-.icons-cartodb_text { background-position: 0 -182px; }
+.icons-cartodb { background-position: 0 -116px; }
 
-.icons-gentoos { background-position: 0 -220px; }
+.icons-cartodb_logo { background-position: 0 -158px; }
 
-.icons-office { background-position: 0 -273px; }
+.icons-cartodb_text { background-position: 0 -234px; }
 
-.icons-project { background-position: 0 -297px; }
+.icons-gentoos { background-position: 0 -272px; }
 
-.icons-recruitment { background-position: 0 -319px; }
+.icons-meetup { background-position: 0 -325px; }
 
-.icons-star { background-position: 0 -340px; }
+.icons-office { background-position: 0 -351px; }
 
+.icons-project { background-position: 0 -377px; }
+
+.icons-recruitment { background-position: 0 -403px; }
+
+.icons-sponsor { background-position: 0 -429px; }
+
+.icons-sprintcode { background-position: 0 -455px; }
+
+.icons-star { background-position: 0 -481px; }
+
+.icons-twitter { background-position: 0 -507px; }
+
+.icons-website { background-position: 0 -537px; }
+
+/* mixins */
 body { width: 100%; min-width: 600px; height: 100%; margin: 0; padding: 0; overflow-y: scroll; background: url("../img/layout/body_bkg.jpg") #cccccc; }
 body h1 { display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; width: 120px; margin: 0 0 0 240px; text-align: center; }
 body h1 { *display: inline; }
 body h1 a { display: block; width: 120px; height: 64px; text-indent: -9999px; text-transform: uppercase; font-size: 0; line-height: 0; background-position: 0 0; }
 body div.loader { position: fixed; top: 150px; left: 50%; width: 121px; height: auto; margin: 0 0 0 -60px; }
-body div.loader a.cartodb { position: relative; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; width: 57px; height: 76px; margin: 0 0 10px 26px; background-position: 0 -106px; text-indent: -9999px; text-transform: uppercase; font-size: 0; line-height: 0; }
+body div.loader a.cartodb { position: relative; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; width: 57px; height: 76px; margin: 0 0 10px 26px; background-position: 0 -158px; text-indent: -9999px; text-transform: uppercase; font-size: 0; line-height: 0; }
 body div.loader a.cartodb { *display: inline; }
 body div.loader a.cartodb:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 body div.loader input { position: absolute; top: 86px; display: none; }
@@ -246,14 +261,14 @@ body div.layout div.long ul li.projects:before { content: 'WITH'; margin-left: -
 body div.layout div.long ul li.employees:before { content: 'AT'; margin-left: -5px; }
 body div.layout div.long ul li.offices:before { content: 'IN'; margin-left: -5px; }
 body div.layout div.long ul li:last-child { width: 100px; border-right: none; }
-body div.layout div.long.bottom { margin: 50px 14px 0 14px; }
+body div.layout div.long.bottom { margin: 50px 14px 0 14px; z-index: 1; }
 body div.layout div.long.bottom h1 { margin: 15px 0 0 230px; }
 body div.layout div.long.bottom p { display: block; margin: 10px 0 20px; font: normal 16px Arial; text-align: center; color: #BDBDBD; letter-spacing: 0; }
 body div.layout div.long.bottom:before { top: -6px; border-bottom: 6px solid white; border-top: none; }
 body div.layout div.long.bottom:after { top: -7px; border-bottom: 6px solid #BCBCBC; border-top: none; }
 body div.layout span.year { position: absolute; top: -60px; left: 50%; width: 30px; height: 13px; padding: 5px; margin: -11px 0 0 -20px; background: #797979; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; font: bold 12px "Arial"; color: white; letter-spacing: -1px; text-align: center; z-index: 1; }
 body div.layout span.month { position: absolute; left: 50%; top: -30px; width: auto; height: 13px; padding: 5px; margin: -11px 0 0 -20px; background: #AAAAAA; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; font: normal 11px "Arial"; color: white; letter-spacing: 0; text-align: center; z-index: 1; }
-body div.layout div.month { position: relative; width: 600px; margin: 120px 0 0 0; z-index: 0; }
+body div.layout div.month { position: relative; width: 600px; margin: 120px 0 0 0; z-index: 0; -webkit-perspective: 3000; }
 body div.layout div.month div { display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; letter-spacing: 0; }
 body div.layout div.month div { *display: inline; }
 body div.layout div.month div.left, body div.layout div.month div.right { position: relative; width: 275px; vertical-align: top; }
@@ -280,16 +295,21 @@ body div.layout div.month div.appointment div.map { position: relative; margin: 
 body div.layout div.month div.appointment div.map { *display: inline; }
 body div.layout div.month div.appointment span.day { position: absolute; top: 0; left: 286px; width: 2px; height: 2px; padding: 3px; margin: 13px 0 0 -6px; -moz-border-radius: 25px; -webkit-border-radius: 25px; -o-border-radius: 25px; -ms-border-radius: 25px; -khtml-border-radius: 25px; border-radius: 25px; background: white; border: 2px solid #787878; z-index: 10; }
 body div.layout div.month div.appointment span.day:hover { height: 4px; width: 4px; margin: 12px 0 0 -7px; cursor: pointer; z-index: 20; }
-body div.layout div.month div.appointment span.type { position: absolute; display: none; top: -14px; left: -13px; width: 24px; height: 24px; border: 2px solid rgba(102, 102, 102, 0.3); background: white; -moz-border-radius: 50px; -webkit-border-radius: 50px; -o-border-radius: 50px; -ms-border-radius: 50px; -khtml-border-radius: 50px; border-radius: 50px; }
-body div.layout div.month div.appointment span.type.true { background: url('../img/icons-s9c52d76a68.png') 4px -315px no-repeat #afd9b3; border-color: rgba(0, 128, 0, 0.3); }
-body div.layout div.month div.appointment span.type.false { background: url('../img/icons-s9c52d76a68.png') 4px -315px no-repeat #ffb4b2; border-color: rgba(255, 0, 0, 0.3); }
-body div.layout div.month div.appointment span.type.office { border: 2px solid rgba(102, 102, 102, 0.5); background: url('../img/icons-s9c52d76a68.png') 3px -270px no-repeat white; }
-body div.layout div.month div.appointment span.type.project { border: 2px solid rgba(102, 102, 102, 0.5); background: url('../img/icons-s9c52d76a68.png') 3px -293px no-repeat white; }
-body div.layout div.month div.appointment span.type.star { border: 2px solid rgba(255, 255, 0, 0); background: url('../img/icons-s9c52d76a68.png') 0 -340px no-repeat #f4e335; }
+body div.layout div.month div.appointment span.type { position: absolute; display: block; top: -16px; left: -18px; width: 28px; height: 28px; border: 2px solid #ADADAD; background: white; -moz-border-radius: 50px; -webkit-border-radius: 50px; -o-border-radius: 50px; -ms-border-radius: 50px; -khtml-border-radius: 50px; border-radius: 50px; }
+body div.layout div.month div.appointment span.type.recruitment { background: url('../img/icons-seb4d32f9b6.png') 6px -398px no-repeat white; }
+body div.layout div.month div.appointment span.type.office { background: url('../img/icons-seb4d32f9b6.png') 6px -346px no-repeat white; }
+body div.layout div.month div.appointment span.type.twitter { background: url('../img/icons-seb4d32f9b6.png') 4px -503px no-repeat white; }
+body div.layout div.month div.appointment span.type.project { background: url('../img/icons-seb4d32f9b6.png') 6px -371px no-repeat white; }
+body div.layout div.month div.appointment span.type.star { background: url('../img/icons-seb4d32f9b6.png') 6px -475px no-repeat white; }
+body div.layout div.month div.appointment span.type.award { background: url('../img/icons-seb4d32f9b6.png') 5px -59px no-repeat white; }
+body div.layout div.month div.appointment span.type.blog { background: url('../img/icons-seb4d32f9b6.png') 6px -83px no-repeat white; }
+body div.layout div.month div.appointment span.type.meetup, body div.layout div.month div.appointment span.type.conference { background: url('../img/icons-seb4d32f9b6.png') 6px -320px no-repeat white; }
+body div.layout div.month div.appointment span.type.sprintcode { background: url('../img/icons-seb4d32f9b6.png') 6px -449px no-repeat white; }
+body div.layout div.month div.appointment span.type.website { background: url('../img/icons-seb4d32f9b6.png') 3px -532px no-repeat white; }
 body div.layout div.month div.appointment:before { position: absolute; content: ' '; top: 13px; left: 100%; width: 0; height: 0; margin: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 6px solid white; z-index: 3; }
 body div.layout div.month div.appointment:after { position: absolute; content: ' '; top: 13px; right: -7px; width: 0; height: 0; margin: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 6px solid #BCBCBC; z-index: 0; }
 body div.layout div.month div.right div.appointment { -moz-box-shadow: rgba(0, 0, 0, 0.1) 1px 0 2px 1px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 0 2px 1px; -o-box-shadow: rgba(0, 0, 0, 0.1) 1px 0 2px 1px; box-shadow: rgba(0, 0, 0, 0.1) 1px 0 2px 1px; }
-body div.layout div.month div.right div.appointment span.type { left: 264px; }
+body div.layout div.month div.right div.appointment span.type { left: 244px; }
 body div.layout div.month div.right div.appointment span.day { left: -25px; }
 body div.layout div.month div.right div.appointment:before { left: -6px; border-left: none; border-right: 6px solid white; }
 body div.layout div.month div.right div.appointment:after { left: -7px; border-left: none; border-right: 6px solid #BCBCBC; }
@@ -302,6 +322,6 @@ body footer div.years a:hover { border-color: #666666; color: #666666; cursor: p
 body footer div.years a.selected { border-color: #333333; color: #333333; }
 body footer div.years a.selected:hover { cursor: default; color: #333333; border-color: #333333; }
 body footer a.cartodb { position: absolute; bottom: 0; left: 5px; }
-body footer a.xavijam { position: absolute; right: 5px; bottom: 0; padding: 0 0 23px 0; background-position: 0 -208px; font: normal 9px "PT Sans"; color: #777777; text-decoration: none; }
+body footer a.xavijam { position: absolute; right: 5px; bottom: 0; padding: 0 0 23px 0; background-position: 0 -260px; font: normal 9px "PT Sans"; color: #777777; text-decoration: none; }
 body footer a.xavijam em { display: block; padding: 0 6px 0 0; text-align: right; }
 body footer a.xavijam:hover { color: #333333; }
