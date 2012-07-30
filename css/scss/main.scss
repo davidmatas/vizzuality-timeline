@@ -396,7 +396,7 @@
             &.twitter {@include background(sprite($icons-sprites, twitter, $offset-x:4px, $offset-y:4px) no-repeat white);}
             &.project {@include background(sprite($icons-sprites, project, $offset-x:6px, $offset-y:6px) no-repeat white);}
             &.star {@include background(sprite($icons-sprites, star, $offset-x:6px, $offset-y:6px) no-repeat white);}
-            &.award {@include background(sprite($icons-sprites, award, $offset-x:5px, $offset-y:5px) no-repeat white);}
+            &.award {@include background(sprite($icons-sprites, award, $offset-x:6px, $offset-y:5px) no-repeat white);}
             &.blog {@include background(sprite($icons-sprites, blog, $offset-x:6px, $offset-y:7px) no-repeat white);}
             &.meetup,&.conference {@include background(sprite($icons-sprites, meetup, $offset-x:6px, $offset-y:5px) no-repeat white);}
             &.sprintcode {@include background(sprite($icons-sprites, sprintcode, $offset-x:6px, $offset-y:6px) no-repeat white);}
