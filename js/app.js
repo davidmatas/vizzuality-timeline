@@ -65,7 +65,6 @@
           employees: 0,
           offices: 0,
           years: 0
-
         }
 
         // Start drawing!
@@ -95,7 +94,8 @@
 
         var timestamp = new Date() - new Date(day.when)
           , timeline = this.timeline
-          , $month_block = this.$timeline.find("div.month").last();
+          , $month_block = this.$timeline.find("div.month").last()
+          , first = false;
 
         // Check if it belongs to a new month or not
         if (timeline.last_month != new Date(day.when).getMonthName()) {
@@ -115,6 +115,9 @@
           var month_span_width = $(month_span).outerWidth();
 
           $(month_span).css({"margin-left": "-" + (month_span_width/2) + "px"})
+
+          // First appointment
+          first = true;
         }
 
 
@@ -137,9 +140,6 @@
           // New year for the footer years menu
           var year = this.make("a", {"id":timeline.last_year, "href": "#go" + timeline.last_year}, timeline.last_year);
           this.$footer.find("div.years").append(year);
-
-          // New year, add it
-          this.stats.years++;
         }
 
 
@@ -153,7 +153,7 @@
 
 
         // Block
-        var $appointment = $(this.make("div", {"class": "appointment " + day.status}, ""));
+        var $appointment = $(this.make("div", {"class": "appointment " + day.status + " " + (first ? "first" : "")}, ""));
 
         $month_block.find("." + timeline.side).append($appointment);
 
@@ -161,7 +161,7 @@
         if (day.title)        $appointment.append("<h3>" +  ((a_link) ? a_link : day.title) + "</h3>");
         if (day.description)  $appointment.append("<p class='description'>" + day.description + "</p>");
         if (day.video)        $appointment.append(day.video);
-        if (day.image)        $appointment.append("<img height='" + (day.asset_height || 165) + "' src='/img/layout/" + day.image + "' title='" + day.title + "' alt='" + day.title + "' />");
+        if (day.image)        $appointment.append("<div class='image'><img height='" + (day.asset_height || 165) + "' src='/img/layout/" + day.image + "' title='" + day.title + "' alt='" + day.title + "' /></div>");
         if (day.position)     $appointment.append("<div class='map' id='map" + day.cartodb_id + "'></div>");
         if (day.footer)       $appointment.append("<p class='footer'>" + day.footer + "</p>");
 
@@ -175,8 +175,8 @@
 
           // create a CloudMade tile layer with style #997 (or use other provider of your choice)
           var cloudmade = new L.TileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
-              attribution: '',
-              maxZoom: 20
+            attribution: '',
+            maxZoom: 20
           });
 
           // add the layer to the map, set the view to a given place and zoom
@@ -206,6 +206,8 @@
           this.timeline.side = "left";
         }
 
+        // Last day
+        this.stats.years = day.when;
       },
 
       _printStats: function() {
@@ -213,7 +215,15 @@
           , $list = $("<ul>");
 
         _.each(this.stats,function(i,stat){
-          $list.append("<li class='" + stat  + "'><h2>" + (stat == "projects" ? "+" + i : i) + "</h2><label>" + stat + "</label></li>")
+          var count = i;
+
+          if (stat == "projects") { count = "+" + i }
+          if (stat == "years") {
+            var today = new Date();
+            count = ((today - new Date(count)) / (1000*60*60*24*30*12)).toFixed(1);
+          }
+
+          $list.append("<li class='" + stat  + "'><h2>" + count + "</h2><label>" + stat + "</label></li>")
         })
 
         $stats.append($list);
@@ -227,7 +237,7 @@
         $born
           .append('<h1><a href="http://vizzuality.com" target="_blank">Vizzuality</a></h1>')
           .append('<p>Born on 18 November 2008</p>')
-
+          .append('<p class="parents">by <a href="http://twitter.com/saleiva" target="_blank">Sergio Álvarez</a> and <a href="http://twitter.com/jatorre" target="_blank">Javier de la Torre</a></p>')
 
         this.$timeline.append($born);
       },
@@ -305,8 +315,6 @@
     });
 
 
-
-   
     window.vizzualityTimeline = new VizzualityView({
       el: $("body"),
       model: new VizzualityModel()
