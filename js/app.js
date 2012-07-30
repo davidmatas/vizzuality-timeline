@@ -161,7 +161,7 @@
         if (day.title)        $appointment.append("<h3>" +  ((a_link) ? a_link : day.title) + "</h3>");
         if (day.description)  $appointment.append("<p class='description'>" + day.description + "</p>");
         if (day.video)        $appointment.append(day.video);
-        if (day.image)        $appointment.append("<div class='image'><img height='" + (day.asset_height || 165) + "' src='/img/layout/" + day.image + "' title='" + day.title + "' alt='" + day.title + "' /></div>");
+        if (day.image)        $appointment.append("<div class='image'><img height='" + (day.asset_height || 165) + "' src='img/layout/" + day.image + "' title='" + day.title + "' alt='" + day.title + "' /></div>");
         if (day.position)     $appointment.append("<div class='map' id='map" + day.cartodb_id + "'></div>");
         if (day.footer)       $appointment.append("<p class='footer'>" + day.footer + "</p>");
 
