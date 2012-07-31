@@ -78,7 +78,7 @@
           if (history.length > 0) {
             self._updateLoader(_.size(history),model_size);
 
-            setTimeout(drawRow,10);
+            setTimeout(drawRow,5);
           } else {
             self._printStats();
             self._showBorn();
