@@ -236,7 +236,7 @@
 
         $born
           .append('<h1><a href="http://vizzuality.com" target="_blank">Vizzuality</a></h1>')
-          .append('<p>Born on 18 November 2008</p>')
+          .append('<p>Born on 1 April 2008</p>')
           .append('<p class="parents">by <a href="http://twitter.com/saleiva" target="_blank">Sergio Álvarez</a> and <a href="http://twitter.com/jatorre" target="_blank">Javier de la Torre</a></p>')
 
         this.$timeline.append($born);
