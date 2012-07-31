@@ -1,0 +1,339 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/* Corrects `block` display not defined in IE6/7/8/9 & FF3. */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
+
+/* Corrects `inline-block` display not defined in IE6/7/8/9 & FF3. */
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+/* Prevents modern browsers from displaying `audio` without controls. Remove excess height in iOS5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/* Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4. Known issue: no IE6 support. */
+[hidden] { display: none; }
+
+/* ========================================================================== Base ========================================================================== */
+/* 1. Corrects text resizing oddly in IE6/7 when body `font-size` is set using `em` units. 2. Prevents iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-size: 100%; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ -ms-text-size-adjust: 100%; /* 2 */ }
+
+/* Addresses `font-family` inconsistency between `textarea` and other form elements. */
+html, button, input, select, textarea { font-family: sans-serif; }
+
+/* Addresses margins handled incorrectly in IE6/7. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/* Addresses `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/* Improves readability when focused and also mouse hovered in all browsers. people.opera.com/patrickl/experiments/keyboard/test */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/* Addresses font sizes and margins set differently in IE6/7. Addresses font sizes within `section` and `article` in FF4+, Chrome, S5. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+h2 { font-size: 1.5em; margin: 0.83em 0; }
+
+h3 { font-size: 1.17em; margin: 1em 0; }
+
+h4 { font-size: 1em; margin: 1.33em 0; }
+
+h5 { font-size: 0.83em; margin: 1.67em 0; }
+
+h6 { font-size: 0.75em; margin: 2.33em 0; }
+
+/* Addresses styling not present in IE7/8/9, S5, Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/* Addresses style set to `bolder` in FF3+, S4/5, Chrome. */
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+/* Addresses styling not present in S5, Chrome. */
+dfn { font-style: italic; }
+
+/* Addresses styling not present in IE6/7/8/9. */
+mark { background: #ff0; color: #000; }
+
+/* Addresses margins set differently in IE6/7. */
+p, pre { margin: 1em 0; }
+
+/* Corrects font family set oddly in IE6, S4/5, Chrome. en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+code, kbd, pre, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improves readability of pre-formatted text in all browsers. */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+/* Addresses CSS quotes not supported in IE6/7. */
+q { quotes: none; }
+
+/* Addresses `quotes` property not supported in S4. */
+q:before, q:after { content: ''; content: none; }
+
+small { font-size: 75%; }
+
+/* Prevents `sub` and `sup` affecting `line-height` in all browsers. gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Lists ========================================================================== */
+/* Addresses margins set differently in IE6/7. */
+dl, menu, ol, ul { margin: 1em 0; }
+
+dd { margin: 0 0 0 40px; }
+
+/* Addresses paddings set differently in IE6/7. */
+menu, ol, ul { padding: 0 0 0 40px; }
+
+/* Corrects list images handled incorrectly in IE7. */
+nav ul, nav ol { list-style: none; list-style-image: none; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/* 1. Removes border when inside `a` element in IE6/7/8/9, FF3. 2. Improves image quality when scaled in IE7. code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+img { border: 0; /* 1 */ -ms-interpolation-mode: bicubic; /* 2 */ }
+
+/* Corrects overflow displayed oddly in IE9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/* Addresses margin not present in IE6/7/8/9, S5, O11. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/* Corrects margin displayed oddly in IE6/7. */
+form { margin: 0; }
+
+/* Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/* 1. Corrects color not being inherited in IE6/7/8/9. 2. Corrects text not wrapping in FF3. 3. Corrects alignment displayed oddly in IE6/7. */
+legend { border: 0; /* 1 */ padding: 0; white-space: normal; /* 2 */ *margin-left: -7px; /* 3 */ }
+
+/* 1. Corrects font size not being inherited in all browsers. 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome. 3. Improves appearance and consistency in all browsers. */
+button, input, select, textarea { font-size: 100%; /* 1 */ margin: 0; /* 2 */ vertical-align: baseline; /* 3 */ *vertical-align: middle; /* 3 */ }
+
+/* Addresses FF3/4 setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Corrects inability to style clickable `input` types in iOS. 3. Improves usability and consistency of cursor style between image-type `input` and others. 4. Removes inner spacing in IE7 without affecting normal text inputs. Known issue: inner spacing remains in IE6. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ *overflow: visible; /* 4 */ }
+
+/* Re-set default cursor for disabled elements. */
+button[disabled], input[disabled] { cursor: default; }
+
+/* 1. Addresses box sizing set to content-box in IE8/9. 2. Removes excess padding in IE8/9. 3. Removes excess padding in IE7. Known issue: excess padding remains in IE6. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ *height: 13px; /* 3 */ *width: 13px; /* 3 */ }
+
+/* 1. Addresses `appearance` set to `searchfield` in S5, Chrome. 2. Addresses `box-sizing` set to `border-box` in S5, Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/* Removes inner padding and search cancel button in S5, Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/* Removes inner padding and border in FF3+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* 1. Removes default vertical scrollbar in IE6/7/8/9. 2. Improves readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/* Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+.tipsy { font-size: 11px; position: absolute; padding: 5px; z-index: 100000; }
+
+.tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
+
+/* Rounded corners */
+.tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+
+/* Uncomment for shadow */
+/*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+.tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+
+/* Rules to colour arrows */
+.tipsy-arrow-n { border-bottom-color: #000; }
+
+.tipsy-arrow-s { border-top-color: #000; }
+
+.tipsy-arrow-e { border-left-color: #000; }
+
+.tipsy-arrow-w { border-right-color: #000; }
+
+.tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+
+.tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+
+.tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+
+.tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+
+.tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+
+.tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+
+.tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+
+.tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
+
+/* icons */
+.icons-sprite, .icons-Vizzuality, .icons-award, .icons-blog, .icons-cartodb, .icons-cartodb_logo, .icons-cartodb_text, .icons-gentoos, .icons-meetup, .icons-office, .icons-project, .icons-recruitment, .icons-sponsor, .icons-sprintcode, .icons-star, .icons-twitter, .icons-website, body h1 a, body div.loader a.cartodb, body footer a.xavijam { background: url('../img/icons-s6e7ecdeb80.png') no-repeat; }
+
+.icons-Vizzuality { background-position: 0 0; }
+
+.icons-award { background-position: 0 -309px; }
+
+.icons-blog { background-position: 0 -495px; }
+
+.icons-cartodb { background-position: 0 -64px; }
+
+.icons-cartodb_logo { background-position: 0 -179px; }
+
+.icons-cartodb_text { background-position: 0 -255px; }
+
+.icons-gentoos { background-position: 0 -126px; }
+
+.icons-meetup { background-position: 0 -361px; }
+
+.icons-office { background-position: 0 -521px; }
+
+.icons-project { background-position: 0 -283px; }
+
+.icons-recruitment { background-position: 0 -417px; }
+
+.icons-sponsor { background-position: 0 -469px; }
+
+.icons-sprintcode { background-position: 0 -443px; }
+
+.icons-star { background-position: 0 -335px; }
+
+.icons-twitter { background-position: 0 -547px; }
+
+.icons-website { background-position: 0 -387px; }
+
+body { width: 100%; min-width: 600px; height: 100%; margin: 0; padding: 0; overflow-y: scroll; background: url("../img/layout/body_bkg.jpg") #cccccc; }
+body h1 { display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; width: 120px; margin: 0 0 0 240px; text-align: center; }
+body h1 { *display: inline; }
+body h1 a { display: block; width: 120px; height: 64px; text-indent: -9999px; text-transform: uppercase; font-size: 0; line-height: 0; background-position: 0 0; }
+body div.loader { position: fixed; top: 150px; left: 50%; width: 121px; height: auto; margin: 0 0 0 -60px; }
+body div.loader a.cartodb { position: relative; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; width: 57px; height: 76px; margin: 0 0 10px 26px; background-position: 0 -179px; text-indent: -9999px; text-transform: uppercase; font-size: 0; line-height: 0; }
+body div.loader a.cartodb { *display: inline; }
+body div.loader a.cartodb:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+body div.loader input { position: absolute; top: 86px; display: none; }
+body div.loader p { display: block; width: 100%; margin: 5px 0 0; padding: 0; font: normal 13px Arial; color: #999999; text-align: center; }
+body header { position: relative; display: none; width: 100%; height: 100px; max-height: 100px; margin: 0; padding: 50px 0; overflow: hidden; }
+body header div.wrapper { display: block; width: 600px; margin: 0 auto; }
+body header div.wrapper p { margin: 10px 0 0 0; font: normal 16px "Arial"; color: #999999; text-shadow: white 0 1px; letter-spacing: 0px; text-align: center; }
+body div.layout { position: relative; opacity: 0; width: 600px; margin: 10px auto 0; padding: 0 0 100px; letter-spacing: -4px; }
+body div.layout div.long { position: relative; display: block; margin: 0 14px; padding: 0; background: white; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 2px 1px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 2px 1px; box-shadow: rgba(0, 0, 0, 0.1) 0 0 2px 1px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; border: 1px solid #BCBCBC; z-index: 10; }
+body div.layout div.long:before { position: absolute; content: ' '; bottom: -6px; left: 50%; width: 0; height: 0; margin: 0 0 0 -5px; border-right: 6px solid transparent; border-left: 6px solid transparent; border-top: 6px solid white; z-index: 3; }
+body div.layout div.long:after { position: absolute; content: ' '; left: 50%; bottom: -7px; width: 0; height: 0; margin: 0 0 0 -5px; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid #BCBCBC; z-index: 0; }
+body div.layout div.long ul { display: block; margin: 0.6em 0; padding: 5px 0; letter-spacing: -4px; }
+body div.layout div.long ul li { position: relative; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; vertical-align: top; width: 100px; padding: 0 21px; letter-spacing: 0; border-right: 1px solid #DEDEDE; }
+body div.layout div.long ul li { *display: inline; }
+body div.layout div.long ul li h2 { display: block; margin: 10px 0 0; font: bold 42px "PT Sans"; color: #787878; letter-spacing: -2px; text-align: center; }
+body div.layout div.long ul li label { display: block; margin: 0 0 10px 0; font: bold 12px Arial; color: #ABABAB; text-transform: uppercase; text-align: center; }
+body div.layout div.long ul li:before { position: absolute; left: 100%; top: 50%; padding: 5px 0; margin: -11px 0 0 -13px; font: normal 12px Arial; color: #CCC; letter-spacing: 0; background: white; }
+body div.layout div.long ul li.projects:before { content: 'WITH'; margin-left: -13px; }
+body div.layout div.long ul li.employees:before { content: 'AT'; margin-left: -5px; }
+body div.layout div.long ul li.offices:before { content: 'IN'; margin-left: -5px; }
+body div.layout div.long ul li:last-child { width: 95px; border-right: none; }
+body div.layout div.long.bottom { margin: 50px 14px 0 14px; z-index: 1; }
+body div.layout div.long.bottom h1 { margin: 15px 0 0 230px; }
+body div.layout div.long.bottom p { display: block; margin: 10px 0 5px; font: normal 16px Arial; text-align: center; color: #AAA; letter-spacing: 0; }
+body div.layout div.long.bottom p.parents { margin: 10px 0 20px 0; font-size: 13px; color: #BDBDBD; }
+body div.layout div.long.bottom p a { color: #96CA51; text-decoration: none; }
+body div.layout div.long.bottom p a:hover { text-decoration: underline; }
+body div.layout div.long.bottom:before { top: -6px; border-bottom: 6px solid white; border-top: none; }
+body div.layout div.long.bottom:after { top: -7px; border-bottom: 6px solid #BCBCBC; border-top: none; }
+body div.layout span.year { position: absolute; top: -60px; left: 50%; width: 30px; height: 13px; padding: 5px; margin: -11px 0 0 -20px; background: #797979; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; font: bold 12px "Arial"; color: white; letter-spacing: -1px; text-align: center; z-index: 1; }
+body div.layout span.month { position: absolute; left: 50%; top: -30px; width: auto; height: 13px; padding: 5px; margin: -11px 0 0 -20px; background: #AAAAAA; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; font: normal 11px "Arial"; color: white; letter-spacing: 0; text-align: center; z-index: 1; }
+body div.layout div.month { position: relative; width: 600px; margin: 120px 0 0 0; z-index: 0; -webkit-perspective: 3000; }
+body div.layout div.month div { display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; letter-spacing: 0; }
+body div.layout div.month div { *display: inline; }
+body div.layout div.month div.left, body div.layout div.month div.right { position: relative; width: 275px; vertical-align: top; }
+body div.layout div.month div.right { margin: 0 0 0 36px; }
+body div.layout div.month div.left { margin: 0 0 0 14px; }
+body div.layout div.month div.appointment { position: relative; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; float: left; width: 254px; height: auto; padding: 3px; margin: 20px 0 0 0; background: white; -webkit-box-shadow: rgba(0, 0, 0, 0.1) -1px 0 2px 1px; -moz-box-shadow: rgba(0, 0, 0, 0.1) -1px 0 2px 1px; box-shadow: rgba(0, 0, 0, 0.1) -1px 0 2px 1px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; border: 1px solid #BCBCBC; }
+body div.layout div.month div.appointment { *display: inline; }
+body div.layout div.month div.appointment.first { margin: 0!important; }
+body div.layout div.month div.appointment h3 { margin: 7px; font: bold 15px "PT Sans"; color: #666666; }
+body div.layout div.month div.appointment h3 + div.image { position: relative; margin: 4px 0 0!important; }
+body div.layout div.month div.appointment h3 + p.description { padding: 10px 0 0 0; border-top: 1px solid #DDD; }
+body div.layout div.month div.appointment h3 + p.footer { padding: 10px 0 0 0; border-top: 1px solid #DDD; }
+body div.layout div.month div.appointment h3 a { color: #666666; }
+body div.layout div.month div.appointment h3 a:hover { color: #333333; }
+body div.layout div.month div.appointment div.image { position: relative; margin: 10px 0 0; }
+body div.layout div.month div.appointment div.image img { width: 254px; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; padding: 0; }
+body div.layout div.month div.appointment div.image img { *display: inline; }
+body div.layout div.month div.appointment iframe { width: 254px; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; margin: 10px 0 0; padding: 0; }
+body div.layout div.month div.appointment iframe { *display: inline; }
+body div.layout div.month div.appointment p { margin: 10px 7px 7px; font: normal 13px "Arial"; color: #999999; line-height: 17px; }
+body div.layout div.month div.appointment a { text-decoration: none; color: #96CA51; }
+body div.layout div.month div.appointment a:hover { color: #96CA51; text-decoration: underline; }
+body div.layout div.month div.appointment div.map { position: relative; margin: 3px 0 0 0; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; width: 100%; height: 200px; }
+body div.layout div.month div.appointment div.map { *display: inline; }
+body div.layout div.month div.appointment span.day { position: absolute; top: 0; left: 286px; width: 2px; height: 2px; padding: 3px; margin: 13px 0 0 -6px; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; -o-border-radius: 25px; border-radius: 25px; background: white; border: 2px solid #787878; z-index: 10; }
+body div.layout div.month div.appointment span.day:hover { height: 4px; width: 4px; margin: 12px 0 0 -7px; cursor: pointer; z-index: 20; }
+body div.layout div.month div.appointment span.type { position: absolute; display: block; top: -16px; left: -18px; width: 28px; height: 28px; border: 2px solid #ADADAD; background: white; -webkit-border-radius: 50px; -moz-border-radius: 50px; -ms-border-radius: 50px; -o-border-radius: 50px; border-radius: 50px; }
+body div.layout div.month div.appointment span.type.recruitment { background: url('../img/icons-s6e7ecdeb80.png') 6px -412px no-repeat white; }
+body div.layout div.month div.appointment span.type.office { background: url('../img/icons-s6e7ecdeb80.png') 6px -516px no-repeat white; }
+body div.layout div.month div.appointment span.type.twitter { background: url('../img/icons-s6e7ecdeb80.png') 4px -543px no-repeat white; }
+body div.layout div.month div.appointment span.type.project { background: url('../img/icons-s6e7ecdeb80.png') 6px -277px no-repeat white; }
+body div.layout div.month div.appointment span.type.star { background: url('../img/icons-s6e7ecdeb80.png') 6px -329px no-repeat white; }
+body div.layout div.month div.appointment span.type.award { background: url('../img/icons-s6e7ecdeb80.png') 6px -304px no-repeat white; }
+body div.layout div.month div.appointment span.type.blog { background: url('../img/icons-s6e7ecdeb80.png') 6px -488px no-repeat white; }
+body div.layout div.month div.appointment span.type.meetup, body div.layout div.month div.appointment span.type.conference { background: url('../img/icons-s6e7ecdeb80.png') 6px -356px no-repeat white; }
+body div.layout div.month div.appointment span.type.sprintcode { background: url('../img/icons-s6e7ecdeb80.png') 6px -437px no-repeat white; }
+body div.layout div.month div.appointment span.type.website { background: url('../img/icons-s6e7ecdeb80.png') 3px -382px no-repeat white; }
+body div.layout div.month div.appointment:before { position: absolute; content: ' '; top: 13px; left: 100%; width: 0; height: 0; margin: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 6px solid white; z-index: 3; }
+body div.layout div.month div.appointment:after { position: absolute; content: ' '; top: 13px; right: -7px; width: 0; height: 0; margin: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 6px solid #BCBCBC; z-index: 0; }
+body div.layout div.month div.appointment.false { background: #F1F1F1; -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0; -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0; box-shadow: rgba(0, 0, 0, 0) 0 0 0 0; border-color: #CDCDCD; }
+body div.layout div.month div.appointment.false div.image:before { content: ' '; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0, 0, 0, 0.45); }
+body div.layout div.month div.appointment.false h3, body div.layout div.month div.appointment.false a { color: #898989; }
+body div.layout div.month div.appointment.false a { text-decoration: underline; }
+body div.layout div.month div.appointment.false a:hover { color: #787878; }
+body div.layout div.month div.appointment.false span.type { background-color: #F1F1F1; border-color: #CDCDCD; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; }
+body div.layout div.month div.appointment.false span.type:before { position: absolute; top: -6px; left: 6px; content: 'x'; font: normal 30px "PT Sans",Arial; color: rgba(255, 51, 102, 0.7); }
+body div.layout div.month div.appointment.false:before { border-left-color: #F1F1F1; }
+body div.layout div.month div.right div.appointment { -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 0 2px 1px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 1px 0 2px 1px; box-shadow: rgba(0, 0, 0, 0.1) 1px 0 2px 1px; }
+body div.layout div.month div.right div.appointment span.type { left: 244px; }
+body div.layout div.month div.right div.appointment span.day { left: -25px; }
+body div.layout div.month div.right div.appointment:before { left: -6px; border-left: none; border-right: 6px solid white; }
+body div.layout div.month div.right div.appointment:after { left: -7px; border-left: none; border-right: 6px solid #BCBCBC; }
+body div.layout div.month div.right div.appointment.false { -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0; -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0; box-shadow: rgba(0, 0, 0, 0) 0 0 0 0; }
+body div.layout div.month div.right div.appointment.false:before { border-right-color: #F1F1F1; }
+body div.layout div.timeline { position: absolute; left: 272px; top: 0; bottom: 100px; width: 2px; margin: 0 28px; background: #BDBDBD; z-index: 0; }
+body footer { position: fixed; display: none; bottom: 0; left: 0; height: 80px; width: 100%; margin: 0; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(227, 227, 227, 0)), color-stop(70%, #e3e3e3)); background: -webkit-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 70%); background: -moz-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 70%); background: -o-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 70%); background: -ms-linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 70%); background: linear-gradient(rgba(227, 227, 227, 0), #e3e3e3 70%); z-index: 5; }
+body footer div.years { width: 600px; margin: 55px auto 0; text-align: center; }
+body footer div.years a { height: 10px; padding: 3px 20px 2px; margin: 0 3px 0 0; border-bottom: 4px solid #999999; font: bold 11px "Arial"; text-align: center; color: #999999; text-decoration: none; letter-spacing: 0; }
+body footer div.years a:last-child { margin: 0; }
+body footer div.years a:hover { border-color: #666666; color: #666666; cursor: pointer; }
+body footer div.years a.selected { border-color: #333333; color: #333333; }
+body footer div.years a.selected:hover { cursor: default; color: #333333; border-color: #333333; }
+body footer a.cartodb { position: absolute; bottom: 0; left: 5px; }
+body footer a.xavijam { position: absolute; right: 5px; bottom: 0; padding: 0 0 23px 0; background-position: 0 -114px; font: normal 9px "PT Sans"; color: #777777; text-decoration: none; }
+body footer a.xavijam em { display: block; padding: 0 6px 0 0; text-align: right; }
+body footer a.xavijam:hover { color: #333333; }
